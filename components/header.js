@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SearchIcon } from '@heroicons/react/solid';
 
 export const Header = () => {
   return (
@@ -14,7 +15,14 @@ export const Header = () => {
         />
       </div>
       {/* middle */}
-      <div></div>
+      <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-md">
+        <input
+          type="text"
+          placeholder="Start your search"
+          className="pl-5 bg-transparent outline-none flex-grow text-sm text-gray-600 placeholder-gray-400"
+        />
+        <SearchIcon className="hidden h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:inline-flex md:mx-2" />
+      </div>
       {/* right */}
       <div></div>
     </header>
